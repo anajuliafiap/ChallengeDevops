@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - Cloudia
+name: Build and deploy JAR app to Azure Web App - cloudia
 
 on:
   push:
@@ -49,15 +49,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_45077F1BE48B42938BC25B7E0C3CB463 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A348FADBF1C04FE184CB1BAD5072FA3A }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_7F3ECA150A004A8983A62EAEEFD00D95 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_7FEAE5C351C84E8393F6C42618EC4C97 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9B158A5AC5344EC68451CB23DD5700A6 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_221EB96D29AF449FB86ABD39227838A9 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'Cloudia'
+          app-name: 'cloudia'
           slot-name: 'Production'
           package: '*.jar'
           
